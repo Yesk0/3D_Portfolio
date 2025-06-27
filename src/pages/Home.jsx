@@ -5,6 +5,7 @@ import sakura from "../assets/sakura.mp3";
 import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
 import { Bird, Island, Plane, Sky } from "../models";
+import IslandNavigation from "../components/IslandNavigation";
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -14,6 +15,7 @@ const Home = () => {
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  const islandRef = useRef(); // Этот ref будет передан в Island
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -28,7 +30,6 @@ const Home = () => {
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
 
-    // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
       screenScale = [1.5, 1.5, 1.5];
       screenPosition = [0, -1.5, 0];
@@ -88,6 +89,7 @@ const Home = () => {
           <Bird />
           <Sky isRotating={isRotating} />
           <Island
+            ref={islandRef} 
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
@@ -100,6 +102,12 @@ const Home = () => {
             position={biplanePosition}
             rotation={[0, 20.1, 0]}
             scale={biplaneScale}
+          />
+          <IslandNavigation
+            islandRef={islandRef}
+            setCurrentStage={setCurrentStage}
+            currentStage={currentStage}
+            setIsRotating={setIsRotating} 
           />
         </Suspense>
       </Canvas>
