@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { kbtu, nfactorial_school } from "../assets/images";
 import {
   car,
   contact,
@@ -85,55 +85,29 @@ export const skills = [
 
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Student",
+    company_name: "KBTU",
+    icon: kbtu,
     iconBg: "#accbe1",
-    date: "March 2030 - April 2031",
+    date: "September 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained web projects using technologies aligned with the course syllabus.",
+      "Collaborated with fellow students in team-based assignments, coordinating with designers and developers to deliver functional applications.",
+      "Applied responsive design principles to ensure usability across different devices and browsers.",
+      "Participated in peer code reviews, sharing feedback and improving code quality collaboratively.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#fbc3bc",
-    date: "Jan 2031 - Feb 2032",
+    title: "Participant – Frontend Web Development Course",
+    company_name: "nFactorial School",
+    icon: nfactorial_school,
+    iconBg: "#FF0000",
+    date: "April 2025 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#b7e4c7",
-    date: "Jan 2032 - Jan 2033",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#a2d2ff",
-    date: "Jan 2033 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining frontend projects using technologies taught in the course (e.g., HTML, CSS, JavaScript, and frameworks like React).",
+      "Collaborating with teammates on practical assignments, simulating real-world team workflows with designers and developers.",
+      "Implementing responsive layouts and ensuring compatibility across major browsers.",
+      "Participating in peer code reviews to exchange feedback and improve code quality.",
     ],
   },
 ];
