@@ -1,5 +1,6 @@
 import { Html } from "@react-three/drei";
 import Button from "@mui/material/Button";
+import { styled } from "@mui/system";
 
 const IslandNavigation = ({
   islandRef,
@@ -75,46 +76,30 @@ const IslandNavigation = ({
     animate();
   };
 
+  const CircleButton = styled(Button)({
+    minWidth: "50px",
+    height: "50px",
+    borderRadius: "50%",
+    fontSize: "20px",
+    fontWeight: "bold",
+    backgroundColor: "#1976d2",
+    "&:hover": {
+      backgroundColor: "#1565c0",
+    },
+  });
+
   return (
     <>
       <Html position={[-8, -20, -30]} center>
-        <Button
-          variant="contained"
-          onClick={goToPreviousStage}
-          sx={{
-            minWidth: "50px",
-            height: "50px",
-            borderRadius: "50%",
-            fontSize: "20px",
-            fontWeight: "bold",
-            backgroundColor: "#1976d2",
-            "&:hover": {
-              backgroundColor: "#1565c0",
-            },
-          }}
-        >
+        <CircleButton variant="contained" onClick={goToPreviousStage}>
           {"<"}
-        </Button>
+        </CircleButton>
       </Html>
 
       <Html position={[8, -20, -30]} center>
-        <Button
-          variant="contained"
-          onClick={goToNextStage}
-          sx={{
-            minWidth: "50px",
-            height: "50px",
-            borderRadius: "50%",
-            fontSize: "20px",
-            fontWeight: "bold",
-            backgroundColor: "#1976d2",
-            "&:hover": {
-              backgroundColor: "#1565c0",
-            },
-          }}
-        >
+        <CircleButton variant="contained" onClick={goToNextStage}>
           {">"}
-        </Button>
+        </CircleButton>
       </Html>
     </>
   );
